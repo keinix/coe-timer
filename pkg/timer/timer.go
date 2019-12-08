@@ -3,7 +3,6 @@ package timer
 import (
 	"errors"
 	"fmt"
-	"time"
 )
 
 type Event uint8
@@ -53,7 +52,7 @@ func Start(c chan<- Event, class Class, startEle Element, wantEle Element) error
 		updateEventTime(&eventMap, 0, cycleLength)
 		c <- event
 	}
-	t := time.NewTicker(1e9) // tick every second
+	//t := time.NewTicker(1e9) // tick every second
 	return nil
 }
 
